@@ -1,0 +1,130 @@
+import java.util.Scanner;
+
+public class BMW {
+	
+	public static void bmwX6() {
+		
+		Autos erstesAttribut0 = new Autos();
+		erstesAttribut0.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut0.setAnzahlTueren((byte)5);
+		erstesAttribut0.setAnzahlZylinder((byte)6);
+		erstesAttribut0.setBeschleunigung(6.4);
+		erstesAttribut0.setDrehmoment(400);
+		erstesAttribut0.setGetriebeArt("AUTOMATIK");
+		erstesAttribut0.setHubraum(2.979);
+		erstesAttribut0.setKraftStoffArt("BENZIN");
+		erstesAttribut0.setLeistung(306);
+		erstesAttribut0.setMaxGeschwindigkeit(240);
+		erstesAttribut0.setTankVolumen(85);
+		erstesAttribut0.setVerbrauch(8.51);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("------------------BMW X6------------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut0.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut0.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut0.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut0.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut0.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut0.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut0.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut0.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut0.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut0.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut0.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut0.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+		}
+		
+	}
+	
+	public static void bmwx5() {
+		
+		Autos erstesAttribut1 = new Autos();
+		erstesAttribut1.setAntriebArt("HECKANTRIEB");
+		erstesAttribut1.setAnzahlTueren((byte)5);
+		erstesAttribut1.setAnzahlZylinder((byte)4);
+		erstesAttribut1.setBeschleunigung(6.8);
+		erstesAttribut1.setDrehmoment(350);
+		erstesAttribut1.setGetriebeArt("MANUEL");
+		erstesAttribut1.setHubraum(1.997);
+		erstesAttribut1.setKraftStoffArt("BENZIN");
+		erstesAttribut1.setLeistung(245);
+		erstesAttribut1.setMaxGeschwindigkeit(210);
+		erstesAttribut1.setTankVolumen(73);
+		erstesAttribut1.setVerbrauch(8.1);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("------------------BMW X5------------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut1.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut1.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut1.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut1.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut1.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut1.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut1.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut1.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut1.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut1.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut1.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut1.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+	}
+}
