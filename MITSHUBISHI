@@ -1,0 +1,195 @@
+import java.util.Scanner;
+
+public class MITSHUBISHI {
+	
+	public static void evo3() {
+
+		Autos erstesAttribut4 = new Autos();
+		erstesAttribut4.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut4.setAnzahlTueren((byte)5);
+		erstesAttribut4.setAnzahlZylinder((byte)6);
+		erstesAttribut4.setBeschleunigung(5.2);
+		erstesAttribut4.setDrehmoment(850);
+		erstesAttribut4.setGetriebeArt("AUTOMATIK");
+		erstesAttribut4.setHubraum(3.279);
+		erstesAttribut4.setKraftStoffArt("BENZIN");
+		erstesAttribut4.setLeistung(580);
+		erstesAttribut4.setMaxGeschwindigkeit(360);
+		erstesAttribut4.setTankVolumen(95);
+		erstesAttribut4.setVerbrauch(12.7);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("-----MITSHUBISHI LANCER EVOLUTION III-----");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut4.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut4.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut4.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut4.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut4.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut4.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut4.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut4.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut4.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut4.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut4.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut4.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+		
+	}
+	
+	public static void outlander() {
+
+		Autos erstesAttribut5 = new Autos();
+		erstesAttribut5.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut5.setAnzahlTueren((byte)5);
+		erstesAttribut5.setAnzahlZylinder((byte)4);
+		erstesAttribut5.setBeschleunigung(12.4);
+		erstesAttribut5.setDrehmoment(195);
+		erstesAttribut5.setGetriebeArt("AUTOMATIK");
+		erstesAttribut5.setHubraum(1.998);
+		erstesAttribut5.setKraftStoffArt("BENZIN");
+		erstesAttribut5.setLeistung(150);
+		erstesAttribut5.setMaxGeschwindigkeit(190);
+		erstesAttribut5.setTankVolumen(63);
+		erstesAttribut5.setVerbrauch(6.4);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("----------MITSHUBISHI OUTLANDER-----------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut5.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut5.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut5.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut5.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut5.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut5.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut5.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut5.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut5.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut5.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut5.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut5.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+		
+	}
+	
+	public static void pajero() {
+
+		Autos erstesAttribut6 = new Autos();
+		erstesAttribut6.setAntriebArt("ALLRAD ZUSCHALTBAR");
+		erstesAttribut6.setAnzahlTueren((byte)5);
+		erstesAttribut6.setAnzahlZylinder((byte)4);
+		erstesAttribut6.setBeschleunigung(11.1);
+		erstesAttribut6.setDrehmoment(441);
+		erstesAttribut6.setGetriebeArt("AUTOMATIK");
+		erstesAttribut6.setHubraum(2.979);
+		erstesAttribut6.setKraftStoffArt("DIESEL");
+		erstesAttribut6.setLeistung(190);
+		erstesAttribut6.setMaxGeschwindigkeit(180);
+		erstesAttribut6.setTankVolumen(69);
+		erstesAttribut6.setVerbrauch(9.31);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("------------MITSHUBISHI PAJERO------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut6.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut6.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut6.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut6.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut6.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut6.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut6.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut6.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut6.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut6.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut6.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut6.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+	}
+}
