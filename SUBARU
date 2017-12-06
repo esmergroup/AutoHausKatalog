@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class SUBARU {
+	
+	public static void imprezawrxsti() {
+
+		Autos erstesAttribut7 = new Autos();
+		erstesAttribut7.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut7.setAnzahlTueren((byte)3);
+		erstesAttribut7.setAnzahlZylinder((byte)4);
+		erstesAttribut7.setBeschleunigung(12.6);
+		erstesAttribut7.setDrehmoment(400);
+		erstesAttribut7.setGetriebeArt("AUTOMATIK");
+		erstesAttribut7.setHubraum(1.600);
+		erstesAttribut7.setKraftStoffArt("BENZIN");
+		erstesAttribut7.setLeistung(114);
+		erstesAttribut7.setMaxGeschwindigkeit(179);
+		erstesAttribut7.setTankVolumen(55);
+		erstesAttribut7.setVerbrauch(5.9);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("----------SUBARU IMPREZA WRX STI----------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut7.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut7.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut7.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut7.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut7.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut7.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut7.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut7.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut7.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut7.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut7.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut7.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+	}
+}
