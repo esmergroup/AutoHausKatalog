@@ -1,0 +1,130 @@
+import java.util.Scanner;
+
+public class DAIMLER {
+	
+	public static void c63() {
+
+		Autos erstesAttribut2 = new Autos();
+		erstesAttribut2.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut2.setAnzahlTueren((byte)5);
+		erstesAttribut2.setAnzahlZylinder((byte)6);
+		erstesAttribut2.setBeschleunigung(4.7);
+		erstesAttribut2.setDrehmoment(520);
+		erstesAttribut2.setGetriebeArt("AUTOMATIK");
+		erstesAttribut2.setHubraum(2.996);
+		erstesAttribut2.setKraftStoffArt("BENZIN");
+		erstesAttribut2.setLeistung(367);
+		erstesAttribut2.setMaxGeschwindigkeit(250);
+		erstesAttribut2.setTankVolumen(66);
+		erstesAttribut2.setVerbrauch(7.81);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("-------------MERCEDES BENZ C63------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut2.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut2.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut2.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut2.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut2.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut2.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut2.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut2.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut2.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut2.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut2.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut2.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+		}
+		
+	}
+	
+	public static void s500() {
+		
+		Autos erstesAttribut3 = new Autos();
+		erstesAttribut3.setAntriebArt("ALLRAD PERMANENT");
+		erstesAttribut3.setAnzahlTueren((byte)5);
+		erstesAttribut3.setAnzahlZylinder((byte)8);
+		erstesAttribut3.setBeschleunigung(4.9);
+		erstesAttribut3.setDrehmoment(700);
+		erstesAttribut3.setGetriebeArt("AUTOMATIK");
+		erstesAttribut3.setHubraum(3.982);
+		erstesAttribut3.setKraftStoffArt("BENZIN");
+		erstesAttribut3.setLeistung(345);
+		erstesAttribut3.setMaxGeschwindigkeit(250);
+		erstesAttribut3.setTankVolumen(80);
+		erstesAttribut3.setVerbrauch(9.31);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("------------MERCEDES BENZ S500------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut3.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut3.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut3.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut3.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut3.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut3.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut3.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut3.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut3.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut3.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut3.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut3.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+	}
+}
