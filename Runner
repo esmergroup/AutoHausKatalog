@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("------(PROGRAMM START)-----");
+		System.out.println("---------------------------");
+		System.out.println("AUTOHAUS KANINCHENFURZ GmbH");
+		System.out.println("---------------------------");
+		menue();
+	}
+	
+	public static void ende() {
+		
+		System.out.println("---------------------------");
+		System.out.println("EINEN SCHOENEN TAG WUNSCHT ");
+		System.out.println("IHNEN DAS TEAM VON         ");
+		System.out.println("AUTOHAUS KANINCHENFURZ GmbH");
+		System.out.println("---------------------------");
+		System.out.println("------(PROGRAMM ENDE)------");
+		System.exit(0);
+	}
+	
+	public static void menue() {
+		
+		System.out.println();
+		System.out.println("-->[ZU DEN TECHNISCHEN DATEN VON...]<--");
+		System.out.println("0 = [BMW X5]");
+		System.out.println("1 = [BMW X6]");
+		System.out.println("2 = [MERCEDES BENZ C63]");
+		System.out.println("3 = [MERCEDES BENZ S500]");
+		System.out.println("4 = [SUBARU IMPREZA WRX STI]");
+		System.out.println("5 = [MITSHUBISHI LANCER EVOLUTION III]");
+		System.out.println("6 = [MITSHUBISHI OUTLANDER]");
+		System.out.println("7 = [MITSHUBISHI PAJERO]");
+		System.out.println("8 = [TOYOTA SUPRA]");
+		System.out.println();
+		
+		Scanner eingabe = new Scanner(System.in);
+		byte autoAuswahl = eingabe.nextByte();
+		
+		switch(autoAuswahl){
+			case 0:
+				BMW verbinden = new BMW();
+				verbinden.bmwx5();
+				break;
+			case 1:
+				BMW verbunden = new BMW();
+				verbunden.bmwX6();
+				break;
+			case 2:
+				DAIMLER sollVerbinden = new DAIMLER();
+				sollVerbinden.c63();
+				break;
+			case 3:
+				DAIMLER sollVerbunden = new DAIMLER();
+				sollVerbunden.s500();
+				break;
+			case 4:
+				SUBARU raser = new SUBARU();
+				raser.imprezawrxsti();
+				break;
+			case 5:
+				MITSHUBISHI legende = new MITSHUBISHI();
+				legende.evo3();
+				break;
+			case 6:
+				MITSHUBISHI legendere = new MITSHUBISHI();
+				legendere.outlander();
+				break;
+			case 7:
+				MITSHUBISHI legenderste = new MITSHUBISHI();
+				legenderste.pajero();
+				break;
+			case 8:
+				TOYOTA supers = new TOYOTA();
+				supers.supra();
+			default:
+				System.out.println("[FALSCHE EINGABE]");
+				menue();
+		eingabe.close();
+		}
+	}
+}
