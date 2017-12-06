@@ -1,0 +1,125 @@
+public class Autos {
+	
+	private String kraftStoffArt;
+	private byte anzahlZylinder;
+	private double hubRaum;
+	private int leistung;
+	private int drehMoment;
+	private double beschleunigung;
+	private int maxGeschwindigkeit;
+	private double verbrauch;
+	private String getriebeArt;
+	private String antriebArt;
+	private int tankVolumen;
+	private byte anzahlTueren;
+	
+	//---------------- Setter und Getter Methoden fuer die Attributen
+	//String kraftStoffArt
+	public String getKraftstoffArt() {
+	     return kraftStoffArt;
+	}
+
+	public void setKraftStoffArt( String kraftStoffArt ) {
+		this.kraftStoffArt = kraftStoffArt;
+	}
+	
+	//anzahlZylinder
+	public byte getAnzahlZylinder() {
+		return anzahlZylinder;
+	}
+	
+	public void setAnzahlZylinder( byte anzahlZylinder ) {
+		this.anzahlZylinder = anzahlZylinder;
+	}
+	
+	//hubraum
+	public double getHubraum() {
+		return hubRaum;
+	}
+	
+	public void setHubraum( double hubRaum ) {
+		this.hubRaum = hubRaum;
+	}
+	
+	//leistung
+	public int getLeistung() {
+		return leistung;
+	}
+	
+	public void setLeistung( int leistung ) {
+		this.leistung = leistung;
+	}
+	
+	//drehMoment
+	public int getDrehmoment() {
+		return drehMoment;
+	}
+	
+	public void setDrehmoment( int drehMoment ) {
+		this.drehMoment = drehMoment;
+	}
+	
+	//beschleunigung
+	public double getBeschleunigung() {
+		return beschleunigung;
+	}
+	
+	public void setBeschleunigung( double beschleunigung ) {
+		this.beschleunigung = beschleunigung;
+	}
+	
+	//maxGeschwindigkeit
+	public int getMaxGeschwindigkeit() {
+		return maxGeschwindigkeit;
+	}
+	
+	public void setMaxGeschwindigkeit( int maxGeschwindigkeit ) {
+		this.maxGeschwindigkeit = maxGeschwindigkeit;
+	}
+	
+	//verbrauch
+	public double getVerbrauch() {
+		return verbrauch;
+	}
+	
+	public void setVerbrauch( double verbrauch ) {
+		this.verbrauch = verbrauch;
+	}
+	
+	//getriebeArt
+	public String getGetriebeArt() {
+		return getriebeArt;
+	}
+	
+	public void setGetriebeArt( String getriebeArt ) {
+		this.getriebeArt = getriebeArt;
+	}
+	
+	//antriebArt
+	public String getAntriebArt() {
+		return antriebArt;
+	}
+	
+	public void setAntriebArt( String antriebArt ) {
+		this.antriebArt = antriebArt;
+	}
+	
+	//tankVolumen
+	public int getTankVolumen() {
+		return tankVolumen;
+	}
+	
+	public void setTankVolumen( int tankVolumen ) {
+		this.tankVolumen = tankVolumen;
+	}
+	
+	//anzahlTueren
+	public byte getAnzahlTueren() {
+		return anzahlTueren;
+	}
+	
+	public void setAnzahlTueren( byte anzahlTueren ) {
+		this.anzahlTueren = anzahlTueren;
+	}
+
+}
