@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class TOYOTA {
+	
+	public static void supra() {
+
+		Autos erstesAttribut8 = new Autos();
+		erstesAttribut8.setAntriebArt("HECKANTRIEB");
+		erstesAttribut8.setAnzahlTueren((byte)2);
+		erstesAttribut8.setAnzahlZylinder((byte)6);
+		erstesAttribut8.setBeschleunigung(5.1);
+		erstesAttribut8.setDrehmoment(441);
+		erstesAttribut8.setGetriebeArt("MANUEL");
+		erstesAttribut8.setHubraum(2.997);
+		erstesAttribut8.setKraftStoffArt("BENZIN");
+		erstesAttribut8.setLeistung(330);
+		erstesAttribut8.setMaxGeschwindigkeit(250);
+		erstesAttribut8.setTankVolumen(85);
+		erstesAttribut8.setVerbrauch(11.1);
+		
+		System.out.println("------------------------------------------");
+		System.out.println("---------------TOYOTA SUPRA---------------");
+		System.out.println("------------------------------------------");
+		System.out.println("ANTRIEBART               : "+erstesAttribut8.getAntriebArt());
+		System.out.println("ANZAHL TUEREN            : "+erstesAttribut8.getAnzahlTueren());
+		System.out.println("ANZAHL ZYLINDER          : "+erstesAttribut8.getAnzahlZylinder());
+		System.out.println("BESCHLEUNIGUNG           : "+erstesAttribut8.getBeschleunigung()+" s");
+		System.out.println("DREHMOMENT               : "+erstesAttribut8.getDrehmoment()+" Nm");
+		System.out.println("GETRIEBEART              : "+erstesAttribut8.getGetriebeArt());
+		System.out.println("HUBRAUM                  : "+erstesAttribut8.getHubraum()+" CM^3");
+		System.out.println("KRAFTSTOFFART            : "+erstesAttribut8.getKraftstoffArt());
+		System.out.println("LEISTUNG                 : "+erstesAttribut8.getLeistung()+" PS");
+		System.out.println("MAXIMALE GESCHWINDIGKEIT : "+erstesAttribut8.getMaxGeschwindigkeit()+" KM/H");
+		System.out.println("TANKVOLUMEN              : "+erstesAttribut8.getTankVolumen()+" LITER");
+		System.out.println("VERBRAUCH                : "+erstesAttribut8.getVerbrauch()+" LITER / 100 KM");
+		System.out.println("------------------------------------------");
+		
+		int i = 0;
+		
+		while(i < 2){
+			Scanner befehl = new Scanner(System.in);
+			System.out.println("0 = ENDE");
+			System.out.println("1 = HUPTMENUE");
+			byte eingabe = befehl.nextByte();
+			
+			switch(eingabe){
+				case 0:
+					Runner beenden = new Runner();
+					beenden.ende();
+					break;
+				case 1:
+					Runner weitermachen = new Runner();
+					weitermachen.menue();
+					break;
+				default:
+					System.out.println("[FALSCHE EINGABE]");
+					i++;
+			}
+			
+			if(i == 3){
+				Runner beenden = new Runner();
+				beenden.ende();
+			}
+			befehl.close();
+		}
+	}
+}
